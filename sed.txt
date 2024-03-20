@@ -1,0 +1,103 @@
+sed 's/sales/accountant/' Text1.txt OUTPUT: 
+
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+3 CHARAN 300 20 manager
+4 TEJA 400 21 accountant
+5 ATUKURI 500 22 account
+6 MAITHILI 600 23 accountant
+7 CHEVVU 700 24 peon 
+8 PURUSHOTHAM 800 25 accountant
+9 DEEPU 900 26 assistant
+10 AKKI 1000 27 manager
+
+sed 's/sales/accountant/g' Text1.txt OUTPUT: 
+
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+3 CHARAN 300 20 manager
+4 TEJA 400 21 accountant
+5 ATUKURI 500 22 account
+6 MAITHILI 600 23 accountant
+7 CHEVVU 700 24 peon 
+8 PURUSHOTHAM 800 25 accountant
+9 DEEPU 900 26 assistant
+10 AKKI 1000 27 manager
+
+sed '8s/sales/accountant/' Text1.txt OUTPUT: 
+
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+3 CHARAN 300 20 manager
+4 TEJA 400 21 sales
+5 ATUKURI 500 22 account
+6 MAITHILI 600 23 sales
+7 CHEVVU 700 24 peon 
+8 PURUSHOTHAM 800 25 accountant
+9 DEEPU 900 26 assistant
+10 AKKI 1000 27 manager
+
+sed '8s/sales/accountant/p' Text1.txt OUTPUT: 
+
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+3 CHARAN 300 20 manager
+4 TEJA 400 21 sales
+5 ATUKURI 500 22 account
+6 MAITHILI 600 23 sales
+7 CHEVVU 700 24 peon 
+8 PURUSHOTHAM 800 25 accountant
+8 PURUSHOTHAM 800 25 accountant
+9 DEEPU 900 26 assistant
+10 AKKI 1000 27 manager
+
+sed -n '8s/sales/accountant/' Text1.txt OUTPUT: 
+
+8 PURUSHOTHAM 800 25 accountant
+
+sed '5d' Text1.txt OUTPUT : 
+
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+3 CHARAN 300 20 manager
+4 TEJA 400 21 sales
+6 MAITHILI 600 23 sales
+7 CHEVVU 700 24 peon 
+8 PURUSHOTHAM 800 25 sales
+9 DEEPU 900 26 assistant
+10 AKKI 1000 27 manager
+
+sed '' Text1.txt OUTPUT : 
+
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+3 CHARAN 300 20 manager
+4 TEJA 400 21 sales
+5 ATUKURI 500 22 account
+6 MAITHILI 600 23 sales
+7 CHEVVU 700 24 peon 
+8 PURUSHOTHAM 800 25 sales
+9 DEEPU 900 26 assistant
+
+sed '3,7d' Text1.txt OUTPUT : 
+
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+8 PURUSHOTHAM 800 25 sales
+9 DEEPU 900 26 assistant
+10 AKKI 1000 27 manager
+
+sed '3,' Text1.txt OUTPUT : 
+
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+
+sed '/manager/d' Text1.txt OUTPUT : 
+
+2 VENKATA 200 19 clerk
+4 TEJA 400 21 sales
+5 ATUKURI 500 22 account
+6 MAITHILI 600 23 sales
+7 CHEVVU 700 24 peon 
+8 PURUSHOTHAM 800 25 sales
+9 DEEPU 900 26 assistant

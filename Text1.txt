@@ -1,0 +1,10 @@
+1 KOTA 100 18 manager
+2 VENKATA 200 19 clerk
+3 CHARAN 300 20 manager
+4 TEJA 400 21 sales
+5 ATUKURI 500 22 account
+6 MAITHILI 600 23 sales
+7 CHEVVU 700 24 peon 
+8 PURUSHOTHAM 800 25 sales
+9 DEEPU 900 26 assistant
+10 AKKI 1000 27 manager
